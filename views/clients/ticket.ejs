@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDDEN PARTY - TICKET</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/footer.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/clients/ticket.css">
+</head>
+<body>
+    <!-- Header -->
+	<%- include('./../templates/header') %>
+    <!-- Content -->
+    <main class="main">
+        <span class="main__container">
+            <span class="main__image">
+                <img class="main__img" src="/resources/images/cart/home.jpg" alt="">
+            </span>
+            <span class="main__content">
+                <h1 class="main__title">PREVENTA NAVIDAD</h1>
+                <span class="main__subtitles">
+                    <h2 class="main__subtitle" id="subtitle1">¡No te quedes afuera!</h2>
+                    <h2 class="main__subtitle" id="subtitle2">Primeros 100 lugares</h2>
+                </span>
+                <a class="main__ticket" onclick="showForm()">
+                    <img class="main__ico" src="/resources/images/ticket/general.png" alt="">
+                    <p class="main__text">GENERAL</p>
+                    <p class="main__price">$1800</p>
+                </a>
+                <a class="main__ticket" onclick="showForm()">
+                    <img class="main__ico" src="/resources/images/ticket/vip.png" alt="">
+                    <p class="main__text">VIP</p>
+                    <p class="main__price">$1800</p>
+                </a>
+            </span>
+        </span>
+    </main>
+    <!-- Video -->
+    <video class="video" autoplay loop muted poster="./resources/videos/home.jpg">
+        <source src="/resources/videos/home.mp4" type="video/mp4">
+    </video>
+    <!-- Opacity -->
+    <section class="opacity"></section>
+    <!-- Redes fixed -->
+    <section class="redes">
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/instagram.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/spotify.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/facebook.png" alt="">
+        </a>
+    </section>
+    <!-- Cart fixed -->
+    <section class="cart">
+        <form class="cart__form" action="/mercado_pago" method="post">
+            <span class="cart__content">
+                <label class="cart__label" for="ticketName">Nombre y Apellido</label>
+                <input class="cart__input" type="text" name="ticketName" id="ticketName" placeholder="Nombre y Apellido" required>
+                <label class="cart__label" for="ticketEmail">Email</label>
+                <input class="cart__input" type="email" name="ticketEmail" id="ticketEmail" placeholder="Email" required>
+                <label class="cart__label" for="ticketGral">Entradas General - $1800</label>
+                <input class="cart__input" type="number" name="ticketGral" id="ticketGral" placeholder="3" min="0" required>
+                <label class="cart__label" for="ticketVip">Entradas VIP - $2500</label>
+                <input class="cart__input" type="number" name="ticketVip" id="ticketVip" placeholder="2" min="0" required>
+            </span>
+            <a class="cart__submit" onclick="submitForm()">ADQUIRIR</a>
+        </form>
+        <a class="cart__close" onclick="cartClosed()">x</a>
+    </section>
+    <!-- Footer -->
+    <%- include('./../templates/footer') %>
+
+    <script src="/resources/scripts/clients/ticket.js"></script>
+</body>
+</html>

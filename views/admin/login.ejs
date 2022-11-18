@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google" content="notranslate" />
+	<meta name="robots" content="noindex">
+	<title>Sample - Login Admin</title>
+	<link rel="icon" href="/resources/images/sample.ico">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" type="text/css" href="/resources/css/variables.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/admin/login.css">
+</head>
+<body>
+	<!-- Logo inicio -->
+	<section class="options">
+		<a href="/" class="options__enlace">
+			<img class="options__logo" src="/resources/images/hidden.png" alt="hidden">
+		</a>
+	</section>
+	<!-- Main -->
+	<main class="main">
+		<h2 class="main__subtitle">ADMIN</h2>
+		<form class="form" action="/admin/login/auth" method="POST"> 
+			<label class="form__lbl" for="name">USUARIO</label>
+			<input class="form__input" type="text" name="name">
+			<label class="form__lbl" for="code">CODIGO</label>
+			<input class="form__input" type="code" name="code">
+            <label class="form__lbl" for="password">CONTRASEÑA</label>
+			<input class="form__input" type="password" name="password">
+			<input class="form__submit" type="submit" name="">
+		</form>
+	</main>
+
+</body>
+</html>

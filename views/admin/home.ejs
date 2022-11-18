@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google" content="notranslate" />
+	<meta name="robots" content="noindex">
+	<title>Hidden - Admin Home</title>
+	<link rel="icon" href="/resources/images/sample.ico">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" type="text/css" href="/resources/css/variables.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/admin/home.css">
+</head>
+<body>
+	<!-- Logo inicio -->
+	<section class="options">
+		<a href="/" class="options__enlace">
+			<img class="options__logo" src="/resources/images/hidden.png" alt="hidden">
+		</a>
+	</section>
+	<!-- Main -->
+	<main class="main">
+		<h2 class="main__subtitle">HOME</h2>
+		<section class="content"> 
+			<a class="content__items" onclick="formActiveEdition()">AGREGAR EDICION</a>
+            <a class="content__items" onclick="formActivePhoto()">CARGAR FOTOS</a>
+            <a class="content__items" onclick="formActiveVideo()">CARGAR VIDEOS</a>
+        </section>
+	</main>
+	<!-- Add edition -->
+	<form class="form" id="formEdition" action="/admin/edition/add" method="post">
+		<label class="form__label" for="editionName">EDICION</label>
+		<input class="form__input" type="text" name="editionName" id="editionName" required>
+		<label class="form__label" for="editionDate">FECHA</label>
+		<input class="form__date" type="date" name="editionDate" id="editionDate" required>
+		<input class="form__submit" type="submit" value="ENVIAR">
+		<a class="form__cancel" onclick="closedForm()">CANCELAR</a>
+	</form>
+	<!-- add photos -->
+	<form class="form" id="formPhoto" action="/admin/photos/add" method="post" enctype="multipart/form-data">
+		<label class="form__label" for="editionEdition">EDICION</label>
+		<select class="form__select" name="editionEdition" id="editionEdition" required>
+			<% editions.forEach((edition) => { %>
+			<option value="<%= edition.id %>">FIESTA <%= edition.name %></option>
+			<% }) %>	
+		</select>
+		<label class="form__label" for="editionImages">IMAGENES</label>
+		<input class="form__date" type="file" name="files" id="editionImages" accept="image/png,image/jpeg,image/jpg,image/*" multiple required>
+		<input class="form__submit" type="submit" value="ENVIAR">
+		<a class="form__cancel" onclick="closedForm()">CANCELAR</a>
+	</form>
+	<!-- add Video -->
+	<form class="form" id="formVideo" action="/admin/video/add" method="post" enctype="multipart/form-data">
+		<label class="form__label" for="editionEdition">EDICION</label>
+		<select class="form__select" name="editionEdition" id="editionEdition" required>
+			<% editions.forEach((edition) => { %>
+				<option value="<%= edition.id %>">FIESTA <%= edition.name %></option>
+			<% }) %>
+		</select>
+		<label class="form__label" for="filesVideo">VIDEO</label>
+		<input class="form__date" type="file" name="files" id="filesVideo" accept="video/mp4,video/x-m4v,video/*" required>
+		<input class="form__submit" type="submit" value="ENVIAR">
+		<a class="form__cancel" onclick="closedForm()">CANCELAR</a>
+	</form>
+	
+	<script src="/resources/scripts/admin/home.js"></script>
+</body>
+</html>

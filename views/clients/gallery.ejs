@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDDEN PARTY - GALLERIA</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/footer.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/clients/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+	<%- include('./../templates/header') %>
+    <!-- Content -->
+    <section class="home" id="home">
+        <video class="home__video" autoplay muted loop poster="./resources/videos/home.jpg">
+			<source src="/resources/videos/home.mp4" type="video/mp4">
+		</video>
+        <section class="home__gradient"></section>
+    </section>
+    <main class="main">
+        <h1 class="main__title">FIESTA ANIVERSARIO</h1>
+        <p class="main__date">07-10-22</p>
+        <section class="main__container">
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span>
+            <span class="main__images">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+                <img class="main__img" src="/resources/images/aniversario/image-1.jpg" alt="">
+            </span> 
+        </section>
+    </main>
+    <!-- Redes fixed -->
+    <section class="redes">
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/instagram.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/spotify.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/facebook.png" alt="">
+        </a>
+    </section>
+    <!-- Footer -->
+    <%- include('./../templates/footer') %>
+
+    <script src="/resources/scripts/gallery.js"></script>
+</body>
+</html>

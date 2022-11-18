@@ -1,0 +1,211 @@
+body {
+	background: #000000;
+}
+
+.options {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-block: 60px 100px;
+    margin-inline: 5%;
+}
+
+.options__enlace { width: 30%; margin-inline-end: 50px; height: max-content; }
+
+.options__logo {
+	fill: var(--color-black);
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+/*Producto add*/
+.product__add {
+	color: var(--color-white);
+	font-family: var(--font-family-bold);
+	font-size: 20px;
+	padding: 5px 15px;
+	width: max-content;
+	margin-inline: 5%;
+	border: 1px solid var(--color-black);
+	background: var(--color-black);
+	margin-block-end: 10px;
+	cursor: pointer;
+}
+/*Main*/
+.main {
+	width: 90%;
+	margin-inline: auto;
+	margin-block-end: 50px;
+	border-block: 2px solid var(--color-black);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main:after, .main:before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: var(--color-red);
+	position: absolute;
+	z-index: -1;
+}
+
+.main:after {
+	top: -4px;
+	left: 2px;
+}
+
+.main:before {
+	bottom: 0px;
+	left: 2px;
+}
+
+.main__section {
+	padding-block: 40px;
+	display: flex;
+	flex-direction: column;
+	width: max-content;
+	margin-inline: auto;
+}
+
+.main__href, .main__enlace {
+	color: var(--color-black);
+	font-family: var(--font-family-extra-bold);
+	font-size: 25px;
+	padding: 5px 80px;
+	border: 2px solid var(--color-black);
+	width: -webkit-fill-available;
+	text-align: center;
+	margin-inline: auto;
+	background: none;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 1s all ease;
+	margin-block: 10px;
+}
+
+.main__href:hover {
+	background: var(--color-black);
+	color: var(--color-white);
+}
+
+.main__enlace:hover {
+	background: var(--color-black);
+	color: var(--color-white);
+}
+
+.main__span {
+	display: flex;
+	align-items: center;
+}
+
+.main__delete {
+	display: flex;
+}
+
+.main__ico {
+	width: 30px;
+    height: max-content;
+    padding: 9px;
+    background: var(--color-black);
+    border: 1px solid var(--color-black);
+    fill: var(--color-white);
+    border-radius: 5px;
+    margin-inline-start: 10px;
+    cursor: pointer;
+    transition: 1s all ease;
+}
+
+.main__ico:hover {
+	fill: var(--color-black);
+	background: var(--color-white);
+}
+
+.main__subtitle {
+	color: #000000;
+	font-family: var(--font-family-bold);
+	font-size: 5vw;
+	text-decoration: underline;
+	writing-mode: sideways-lr;
+	padding: 2vw;
+	line-height: 1.2;
+	background: var(--color-white);
+}
+
+/*Formulario*/
+.form {
+	width: 60%;
+	margin: auto 2vw;
+	padding-block: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form__lbl {
+	color: var(--color-white);
+	font-family: var(--font-family-bold);
+	font-size: 25px;
+}
+
+.form__input {
+	height: 35px;
+	outline: none;
+	border: 1px solid var(--color-black);
+	font-family: var(--font-family-light);
+	font-size: 25px;
+	padding-inline: 15px;
+	margin-block-end: 25px;
+}
+
+.form__submit {
+	color: var(--color-white);
+	font-family: var(--font-family-extra-bold);
+	font-size: 20px;
+	padding: 5px 80px;
+	border: 2px solid var(--color-white);
+	width: max-content;
+	margin-inline: auto;
+	background: none;
+	cursor: pointer;
+	transition: 1s all ease;
+}
+
+.form__submit:hover {
+	background: var(--color-white);
+	color: #000000;
+}
+
+
+@media screen and (max-width: 1024px){
+	.options__enlace { width: 40%; }
+	.options__subtitle { font-size: 55px; }
+}
+
+@media screen and (max-width: 740px) {
+	.options__enlace { width: 40%; }
+	.options__subtitle { font-size: 40px;}
+	.main__enlace { font-size: 18px; padding: 5px 30px; }
+	.main__ico { width: 20px; }
+}
+
+@media screen and (max-width: 600px) {
+	.options { flex-direction: column; align-items: start; }
+	.options__enlace { width: 60%; }
+	.options__subtitle { font-size: 50px; width: max-content; margin-block-start: 15px; }
+	.form { width: 80%; }
+	.main__href { font-size: 20px; padding: 5px 40px; }
+}
+
+@media screen and (max-width: 400px) {
+	.options { margin-block: 60px; }
+	.options__subtitle { font-size: 40px; }
+	.form { width: 100%; }
+}
+
+@media screen and (max-width: 330px) {
+	.options__subtitle { font-size: 30px; }
+	.form__submit { padding: 5px 40px; }
+}

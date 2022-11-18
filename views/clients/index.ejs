@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDDEN PARTY - NAVIDAD 2022</title>
+    <link rel="stylesheet" type="text/css" href="/resources/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/templates/footer.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/clients/index.css">
+</head>
+<body>
+    <!-- Header -->
+	<%- include('./../templates/header') %>
+    <section class="home" id="home">
+        <video class="home__video" autoplay muted loop poster="./resources/videos/home.jpg">
+			<source src="/resources/videos/home.mp4" type="video/mp4">
+		</video>
+        <section class="home__gradient"></section>
+    </section>
+    <section class="events" id="galeria">
+        <img class="events__logo" src="/resources/images/hidden-black.png" alt="hidden">
+        <section class="events__items">
+            <h2 class="events__title">Aniversario</h2>
+            <a class="slider" href="/gallery">
+                <span class="slider__inner">
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-2.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-3.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-4.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-5.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-1.jpg" alt="Aniversario"> 
+                    </span> 
+                    <span class="slider__item-relative">
+                        <img class="event__img" src="/resources/images/aniversario/image-2.jpg" alt="Aniversario"> 
+                    </span>
+                </span>
+            </a>
+            <p class="events__date" data-pos="left">07.10.22</p>
+        </section>
+        <section class="events__items">
+            <h2 class="events__title">Fiesta Elegante</h2>
+            <a class="slider" href="/gallery">
+                <span class="slider__inner">
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-2.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-3.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-4.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-5.jpg" alt="Aniversario"> 
+                    </span>
+                    <span class="slider__item">
+                        <img class="event__img" src="/resources/images/aniversario/image-1.jpg" alt="Aniversario"> 
+                    </span> 
+                    <span class="slider__item-relative">
+                        <img class="event__img" src="/resources/images/aniversario/image-2.jpg" alt="Aniversario"> 
+                    </span>
+                </span>
+            </a>
+            <p class="events__date" data-pos="right">23.04.22</p>
+        </section>
+        <a class="events__more" href="">VER MAS</a>
+    </section>
+    <section class="team">
+        <h1 class="team__title">Nuestros Aliados</h1>
+        <span class="team__content">
+            <img class="team__img" src="/resources/images/team/absolut.png" alt="">
+            <img class="team__img" src="/resources/images/team/cocacola.png" alt="">
+            <img class="team__img" src="/resources/images/team/speed.png" alt="">
+        </span>
+    </section>
+    <section class="us">
+        <h1 class="us__title" id="sobre_nosotros">Nosotros</h1>
+        <img class="us__image" src="/resources/images/nosotros/image-5.jpg" alt="">
+        <p class="us__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur temporibus delectus magnam minima animi aperiam quo expedita ut odit quibusdam corrupti, voluptatum beatae. Veritatis numquam in hic cupiditate excepturi. Quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur temporibus delectus magnam minima animi aperiam quo expedita ut odit quibusdam corrupti, voluptatum beatae. Veritatis numquam in hic cupiditate excepturi. Quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur temporibus delectus magnam minima animi aperiam quo expedita ut odit quibusdam corrupti, voluptatum beatae. Veritatis numquam in hic cupiditate excepturi. Quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur temporibus delectus magnam minima animi aperiam quo expedita ut odit quibusdam corrupti, voluptatum beatae. Veritatis numquam in hic cupiditate excepturi. Quibusdam.</p>
+    </section>
+    <!-- Redes fixed -->
+    <section class="redes">
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/instagram.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/spotify.png" alt="">
+        </a>
+        <a class="redes__logos" href="">
+            <img class="redes__logo" src="./resources/images/redes/facebook.png" alt="">
+        </a>
+    </section>
+    <!-- Cart fixed -->
+    <section class="cart">
+        <span class="cart__images">
+            <img class="cart__img" src="/resources/images/cart/home.jpg" alt="">
+        </span>
+        <span class="cart__content">
+            <h2 class="cart__title">Preventa Limitada</h2>
+            <p class="cart__subtitle">No te quedes afuera!</p>
+            <p class="cart__text">Aquiere tu entrada de forma online</p>
+            <a class="cart__buy" target="_blank" href="https://dameentrada.com/evento/63739af048899429302da4b9">COMPRAR AHORA</a>
+        </span>
+        <a class="cart__close" onclick="cartClosed()">x</a>
+    </section>
+    <!-- Footer -->
+    <%- include('./../templates/footer') %>
+
+    <script src="/resources/scripts/clients/index.js"></script>
+</body>
+</html>
